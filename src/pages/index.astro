@@ -1,0 +1,108 @@
+---
+
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/favicon.svg"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width"
+    />
+    <meta
+      name="generator"
+      content={Astro.generator}
+    />
+    <title>Astro</title>
+  </head>
+  <body class="p-10">
+    <h1 class="text-3xl text-center">Animaciones CSS</h1>
+
+    <section>
+      <h2>Moviendo Texto</h2>
+      <article
+        class="w-full h-40 border bg-gray-800 flex justify-center items-center text-slate-100"
+      >
+        <div class="content">
+          <p>Desarrollo de páginas web</p>
+          <div class="visible">
+            <ul>
+              <li>Modernas</li>
+              <li>Responsive</li>
+              <li>Seo técnico</li>
+              <li>Accesibilidad</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    </section>
+  </body>
+</html>
+
+<style>
+  h1 {
+    color: red;
+  }
+  .content {
+    line-height: 40px;
+    display: flex;
+    gap: 10px;
+    font-size: 36px;
+  }
+  .visible {
+    font-weight: 600;
+    overflow: hidden;
+    height: 40px;
+  }
+  p {
+    margin: 0;
+  }
+
+  ul {
+    color: red;
+    margin-top: 0;
+    text-align: left;
+    list-style: none;
+    animation: 6s linear 0s normal none infinite change;
+  }
+
+  ul li {
+    line-height: 40px;
+    margin: 0;
+  }
+
+  @keyframes change {
+    0% {
+      margin-top: 0;
+    }
+    15% {
+      margin-top: 0;
+    }
+    25% {
+      margin-top: -40px;
+    }
+    40% {
+      margin-top: -40px;
+    }
+    50% {
+      margin-top: -80px;
+    }
+    65% {
+      margin-top: -80px;
+    }
+    75% {
+      margin-top: -40px;
+    }
+    85% {
+      margin-top: -40px;
+    }
+    100% {
+      margin-top: 0;
+    }
+  }
+</style>
