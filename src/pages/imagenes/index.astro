@@ -46,7 +46,14 @@ const boxes = [
     <section
       class="flex flex-grow flex-row flex-wrap gap-4 justify-center items-center mt-8"
     >
-      {boxes.map((box) => <Card box={box} />)}
+      {
+        boxes.map((box) => (
+          <Card
+            section="imagenes"
+            box={box}
+          />
+        ))
+      }
     </section>
   </main>
 </Layout>

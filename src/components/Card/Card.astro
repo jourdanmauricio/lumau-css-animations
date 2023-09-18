@@ -1,14 +1,15 @@
 ---
 interface Props {
-  box: {
-    id: number;
-    title: string;
-    description: string;
-    linkTo: string;
-  };
+  section: string;
+   box: {
+     id: number;
+     title: string;
+     description: string;
+     linkTo: string;
+   };
 }
 
-const { box } = Astro.props;
+const { section, box } = Astro.props;
 ---
 
 <div
@@ -23,7 +24,7 @@ const { box } = Astro.props;
 
   <div class="flex justify-evenly pt-4">
     <a
-      href={`/lumau-css-animations/imagenes/${box.linkTo}`}
+      href={`/lumau-css-animations/${section}/${box.linkTo}`}
       class="p-2 hover:bg-gray-800 rounded-sm border"
     >
       Ver detalle
