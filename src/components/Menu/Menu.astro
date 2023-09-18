@@ -1,0 +1,101 @@
+<nav
+  class="flex justify-between items-center px-20 text-slate-100 h-16 w-full z-50 shadow-lg shadow-slate-600"
+>
+  <h1 class="text-3xl">Lumau</h1>
+  <div
+    class="text-slate-100 fixed md:relative top-[85px] md:top-auto bottom-0 w-full md:w-fit -left-full md:left-auto peer-checked:left-0 flex flex-col md:flex-row items-center justify-center transition-all duration-500 gap-8"
+  >
+    <a
+      href="/lumau-css-animations"
+      class={`${
+        Astro.url.pathname.replaceAll('/', '') === 'lumau-css-animations'
+          ? 'text-teal-400'
+          : ''
+      } menu__item anim__bottom to__center`}
+      >Home</a
+    >
+    <a
+      href="/lumau-css-animations/texto"
+      class={`${
+        Astro.url.pathname.replaceAll('/', '') === '/lumau-css-animationstexto'
+          ? 'text-teal-400'
+          : ''
+      } menu__item anim__bottom to__center`}
+      >Animaciones texto</a
+    >
+    <a
+      href="/lumau-css-animations/imagenes"
+      class={`${
+        Astro.url.pathname.replaceAll('/', '') ===
+        '/lumau-css-animationsimagenes'
+          ? 'text-teal-400'
+          : ''
+      } menu__item anim__bottom to__center`}
+      >Imágenes</a
+    >
+    <a
+      href="/lumau-css-animations/botones/"
+      class={`${
+        Astro.url.pathname.replaceAll('/', '') ===
+        '/lumau-css-animationsbotones'
+          ? 'text-teal-400'
+          : ''
+      } menu__item anim__bottom to__center`}
+      >Botones</a
+    >
+    <a
+      href="/lumau-css-animations/degradados/"
+      class={`${
+        Astro.url.pathname.replaceAll('/', '') ===
+        '/lumau-css-animationsdegradados'
+          ? 'text-teal-400'
+          : ''
+      } menu__item anim__bottom to__center`}
+      >Degradados</a
+    >
+    <!-- <a
+      href="/lumau-css-animations/contact/"
+      class={`${
+        Astro.url.pathname.replaceAll('/', '') ===
+        '/lumau-css-animationscontact'
+          ? 'text-teal-400'
+          : ''
+      } menu__item anim__bottom to__center`}
+      >Contacto</a
+    > -->
+  </div>
+</nav>
+
+<style>
+  /**********************/
+  /***   ANIMATIONS   ***/
+  /**********************/
+  .menu__item {
+    position: relative;
+    display: block;
+    /* padding: 4px 8px; */
+  }
+  .anim__bottom::after {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    bottom: -1px;
+    width: 0%;
+    text-align: center;
+    background: teal;
+    height: 1px;
+    transition:
+      width 0.5s ease,
+      left 0.5s ease,
+      right 0.5s ease;
+  }
+  .anim__bottom:hover::after {
+    width: 100%;
+  }
+  .to__center::after {
+    left: 50%;
+  }
+  .to__center:hover::after {
+    left: 0%;
+  }
+</style>

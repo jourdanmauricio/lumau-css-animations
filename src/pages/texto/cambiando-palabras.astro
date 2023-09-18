@@ -1,0 +1,163 @@
+---
+import Layout from '../../layout/Layout.astro';
+const html = `
+  <div class="content">
+    <p>Desarrollo de páginas web</p>
+    <div class="visible">
+      <ul>
+        <li>Modernas</li>
+        <li>Responsive</li>
+        <li>Seo técnico</li>
+        <li>Accesibilidad</li>
+      </ul>
+    </div>
+  </div>
+`;
+const styles = `
+  .content {
+    line-height: 40px;
+    display: flex;
+    gap: 10px;
+    font-size: 36px;
+  }
+  .visible {
+    font-weight: 600;
+    overflow: hidden;
+    height: 40px;
+  }
+  p {
+    margin: 0;
+  }
+  ul {
+    color: red;
+    margin-top: 0;
+    text-align: left;
+    list-style: none;
+    animation: 6s linear 0s normal none infinite change;
+  }
+  ul li {
+    line-height: 40px;
+    margin: 0;
+  }
+  @keyframes change {
+    0% {
+      margin-top: 0;
+    }
+    15% {
+      margin-top: 0;
+    }
+    25% {
+      margin-top: -40px;
+    }
+    40% {
+      margin-top: -40px;
+    }
+    50% {
+      margin-top: -80px;
+    }
+    65% {
+      margin-top: -80px;
+    }
+    75% {
+      margin-top: -40px;
+    }
+    85% {
+      margin-top: -40px;
+    }
+    100% {
+      margin-top: 0;
+    }
+  }`;
+---
+
+<Layout
+  pageTitle="Asesoría financiera"
+  description="Black Wing optimiza tus Finanzas con Profesionales. Nuestros asesores financieros están aquí para ayudarlo. Ingresa y comunícate con nuestro equipo"
+>
+  <main class="px-10">
+    <h1 class="text-slate-200 text-center text-3xl py-6">Cambiando palabras</h1>
+    <section
+      class="w-full h-40 border bg-gray-800 flex justify-center items-center text-slate-100"
+    >
+      <div class="content">
+        <p>Desarrollo de páginas web</p>
+        <div class="visible">
+          <ul>
+            <li>Modernas</li>
+            <li>Responsive</li>
+            <li>Seo técnico</li>
+            <li>Accesibilidad</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <div class="w-2/3 mt-8 mx-auto">
+      <pre><code class="language-html">{html}</code> </pre>
+    </div>
+    <div class="w-2/3 mt-4 mb-8 mx-auto">
+      <pre><code class="language-css">{styles}</code></pre>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .content {
+    line-height: 40px;
+    display: flex;
+    gap: 10px;
+    font-size: 36px;
+  }
+  .visible {
+    font-weight: 600;
+    overflow: hidden;
+    height: 40px;
+  }
+  p {
+    margin: 0;
+  }
+
+  ul {
+    color: red;
+    margin-top: 0;
+    text-align: left;
+    list-style: none;
+    animation: 6s linear 0s normal none infinite change;
+  }
+
+  ul li {
+    line-height: 40px;
+    margin: 0;
+  }
+
+  @keyframes change {
+    0% {
+      margin-top: 0;
+    }
+    15% {
+      margin-top: 0;
+    }
+    25% {
+      margin-top: -40px;
+    }
+    40% {
+      margin-top: -40px;
+    }
+    50% {
+      margin-top: -80px;
+    }
+    65% {
+      margin-top: -80px;
+    }
+    75% {
+      margin-top: -40px;
+    }
+    85% {
+      margin-top: -40px;
+    }
+    100% {
+      margin-top: 0;
+    }
+  }
+</style>
+
+<script src="/src/components/prism/prism.js"></script>

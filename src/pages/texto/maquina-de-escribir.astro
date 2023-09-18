@@ -1,0 +1,100 @@
+---
+import Layout from '../../layout/Layout.astro';
+const html = `
+  <section>
+    <span class="text-3d">Efecto máquina de escribir!</span>
+  </section>
+`;
+const styles = `
+  section {
+    background-color: #f1f1f1;
+    width: 100%;
+    padding: 50px 0;
+    border-radius: 0.25rem /* 4px */;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* steps(28) y width: 28ch -> son la cantidad de caracteres */
+  span {
+    color: #000;
+    font-family: monospace;
+    font-size: 1.5rem;
+    white-space: nowrap;
+    border-right: 2px solid;
+    width: 28ch;
+    overflow: hidden;
+    animation:
+      typing 2s steps(28),
+      blink 0.5s infinite step-end alternate;
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+  }
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }`;
+---
+
+<Layout
+  pageTitle="Asesoría financiera"
+  description="Black Wing optimiza tus Finanzas con Profesionales. Nuestros asesores financieros están aquí para ayudarlo. Ingresa y comunícate con nuestro equipo"
+>
+  <main class="px-10">
+    <h1 class="text-slate-200 text-center text-3xl py-6">
+      Máquina de escribir
+    </h1>
+    <section>
+      <span class="text-3d">Efecto máquina de escribir!</span>
+    </section>
+    <div class="w-2/3 mt-8 mx-auto">
+      <pre><code class="language-html">{html}</code> </pre>
+    </div>
+    <div class="w-2/3 mt-4 mb-8 mx-auto">
+      <pre><code class="language-css">{styles}</code></pre>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  section {
+    background-color: #f1f1f1;
+    width: 100%;
+    padding: 50px 0;
+    border-radius: 0.25rem /* 4px */;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* steps(27) y width: 27ch -> son la cantidad de caracteres */
+  span {
+    color: #000;
+    font-family: monospace;
+    font-size: 1.5rem;
+    white-space: nowrap;
+    border-right: 2px solid;
+    width: 28ch;
+    overflow: hidden;
+    animation:
+      typing 2s steps(28),
+      blink 0.5s infinite step-end alternate;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+  }
+
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+</style>
+
+<script src="/src/components/prism/prism.js"></script>

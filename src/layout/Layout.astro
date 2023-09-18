@@ -1,0 +1,36 @@
+---
+import Menu from '../components/Menu/Menu.astro';
+const { pageTitle = 'Componentrs', description = '' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es-AR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link
+      rel="icon"
+      href="/blackwing-astro/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <meta
+      name="description"
+      content={description}
+    />
+    <link
+      rel="stylesheet"
+      href="/src/components/prism/prism.css"
+    />
+    <title>Lumau components - {pageTitle}</title>
+  </head>
+  <body
+    class="bg-slate-100 text-slate-800 dark:bg-slate-950 dark:text-slate-100"
+  >
+    <Menu />
+    <slot />
+    <!-- <Footer /> -->
+  </body>
+</html>

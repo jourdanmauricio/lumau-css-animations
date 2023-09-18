@@ -1,0 +1,55 @@
+---
+import Layout from '../../layout/Layout.astro';
+
+const boxes = [
+  {
+    id: 1,
+    title: 'Cambiando palabras',
+    description: 'Alterna un listado de palabras en un texto',
+    linkTo: 'cambiando-palabras',
+  },
+  {
+    id: 2,
+    title: 'Texto en 3D',
+    description: 'Genera efecto 3D utilizando sombras',
+    linkTo: 'texto-3d',
+  },
+  {
+    id: 3,
+    title: 'Máquina de escribir',
+    description: 'Efecto máquina de escribir monospace',
+    linkTo: 'maquina-de-escribir',
+  },
+];
+---
+
+<Layout
+  pageTitle="Animaciones sobre texto"
+  description="Black Wing optimiza tus Finanzas con Profesionales. Nuestros asesores financieros están aquí para ayudarlo. Ingresa y comunícate con nuestro equipo"
+>
+  <main>
+    <section
+      class="flex flex-grow flex-row flex-wrap gap-4 justify-center items-center mt-8"
+    >
+      {
+        boxes.map((box) => (
+          <div class="inline-block p-4 border border-solid border-gray-600 rounded max-w-[300px] min-h-[80px] shadow-lg shadow-gray-700/50">
+            <p class="text-center pb-2">{box.title}</p>
+            <hr />
+
+            <p class="py-4">{box.description}</p>
+
+            <div class="flex justify-evenly pt-4">
+              <a
+                href={`/lumau-css-animations/texto/${box.linkTo}`}
+                class="p-2 hover:bg-gray-800 rounded-full"
+              >
+                Ver detalle
+              </a>
+            </div>
+          </div>
+        ))
+      }
+    </section>
+  </main>
+</Layout>
