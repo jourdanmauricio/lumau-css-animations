@@ -1,0 +1,120 @@
+---
+import Layout from '../../layout/Layout.astro';
+
+const html = `
+  <section>
+    <img
+      src="/lumau-css-animations/images/imagen1.jpg"
+      alt="Imagen aleatoria 1"
+    />
+    <img
+      src="/lumau-css-animations/images/imagen2.jpg"
+      alt="Imagen aleatoria 2"
+    />
+    <img
+      src="/lumau-css-animations/images/imagen3.jpg"
+      alt="Imagen aleatoria 3"
+    />
+    <img
+      src="/lumau-css-animations/images/imagen4.jpg"
+      alt="Imagen aleatoria 4"
+    />
+    <img
+      src="/lumau-css-animations/images/imagen5.jpg"
+      alt="Imagen aleatoria 5"
+    />
+  </section>
+`;
+const styles = `
+  section {
+    display: flex;
+    width: 600px;
+    height: 430px;
+    margin: 60px auto;
+  }
+  section img {
+    width: 0;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: 0.5s ease;
+  }
+  section img:hover {
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+  }
+`;
+---
+
+<Layout
+  pageTitle="Asesoría financiera"
+  description="Black Wing optimiza tus Finanzas con Profesionales. Nuestros asesores financieros están aquí para ayudarlo. Ingresa y comunícate con nuestro equipo"
+>
+  <main>
+    <section>
+      <!-- {
+        images.map((image) => (
+          <img
+            src={image.url}
+            alt={image.author}
+          />
+        ))
+      } -->
+      <img
+        src="/lumau-css-animations/images/imagen1.jpg"
+        alt="Imagen aleatoria 1"
+      />
+      <img
+        src="/lumau-css-animations/images/imagen2.jpg"
+        alt="Imagen aleatoria 2"
+      />
+      <img
+        src="/lumau-css-animations/images/imagen3.jpg"
+        alt="Imagen aleatoria 3"
+      />
+      <img
+        src="/lumau-css-animations/images/imagen4.jpg"
+        alt="Imagen aleatoria 4"
+      />
+      <img
+        src="/lumau-css-animations/images/imagen5.jpg"
+        alt="Imagen aleatoria 5"
+      />
+    </section>
+
+    <div class="w-2/3 mt-8 mx-auto">
+      <pre><code class="language-html">{html}</code> </pre>
+    </div>
+    <div class="w-2/3 mt-4 mb-8 mx-auto">
+      <pre><code class="language-css">{styles}</code></pre>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  section {
+    display: flex;
+    width: 600px;
+    height: 430px;
+    margin: 60px auto;
+  }
+
+  section img {
+    width: 0;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: 0.5s ease;
+  }
+
+  section img:hover {
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+  }
+</style>
+
+<script src="/src/components/prism/prism.js"></script>
