@@ -92,94 +92,103 @@ const styles = `
   pageTitle="Asesoría financiera"
   description="Black Wing optimiza tus Finanzas con Profesionales. Nuestros asesores financieros están aquí para ayudarlo. Ingresa y comunícate con nuestro equipo"
 >
-  <main>
-    <div class="main-intro">
-      <h1>Welcome to my first website</h1>
-      <p>
-        Nam interdum felis at felis placerat, sad varius<br />massa ultricies.
-        Integer quis nisi non dolor<br />scelerisque efficitur at sed turpis.
-      </p>
-      <a href="#">MY WORK</a>
+  <section class="hero">
+    <nav>
+      <h1 class="logo">Laser<span>Med</span></h1>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Acerca de mi</a></li>
+        <li><a href="#">Tratamientos</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+      <a
+        href="#"
+        class="btn"
+        >Solicitar cita</a
+      >
+    </nav>
+    <div class="image">
+      <img
+        src="/lumau-css-animations/images/hero-img.png"
+        alt=""
+      />
     </div>
-    <div class="main-quotes"></div>
-  </main>
-  <div class="w-2/3 mt-8 mx-auto">
-    <pre><code class="language-html">{html}</code> </pre>
-  </div>
-  <div class="w-2/3 mt-4 mb-8 mx-auto">
-    <pre><code class="language-css">{styles}</code></pre>
-  </div>
+    <div class="container">
+      <h2>Lorem Ipsum</h2>
+      <p>
+        Neque porro quisquam est qui dolorem ipsum<br /> quia dolor sit amet,
+        consectetur, adipisci velit..."
+      </p>
+      <button class="btn btn-cta"> Contáctanos</button>
+    </div>
+  </section>
 </Layout>
 
 <style>
-  main {
+  .hero {
+    position: relative;
     width: 100%;
     height: calc(100vh - 64px);
-    background-color: #1a253a;
-    background-image: url(/lumau-css-animations/images/background.png);
+    background:
+      linear-gradient(90deg, #80cde000, #41e1d166),
+      url(/lumau-css-animations/images/modern-hospital_opt.jpg) no-repeat center
+        center fixed;
     background-size: cover;
-    background-repeat: no-repeat;
-    padding: 60px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+    z-index: 0;
   }
-  h1 {
-    width: 100%;
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+  }
+  .logo {
+    color: #0f172a;
     font-size: 2rem;
-    /* line-height: 2.5rem; */
-    color: #fff;
-    font-family: Roboto;
     font-weight: 600;
-    text-transform: uppercase;
   }
-  p {
-    font-size: 18px;
-    line-height: 30px;
-    color: #fff;
+  .logo span {
+    color: #075985;
   }
-  a {
-    margin: 30px auto;
-    font-size: 18px;
-    padding: 12px;
-    display: block;
-    background-color: #c13584;
-    padding: 10px 20 px;
+  ul {
+    display: flex;
+    gap: 2rem;
+  }
+  li {
+    color: black;
+  }
+  .btn {
+    background-color: #075985;
+    padding: 4px 8px;
+    border-radius: 4px;
     width: fit-content;
-    color: #fff;
-    cursor: pointer;
   }
-
-  .main-intro {
+  .image {
+    position: absolute;
+    width: 500px;
+    bottom: 0;
+    right: 50px;
+    overflow: hidden;
+    z-index: -10;
+  }
+  .container {
+    padding-top: 10vh;
+    padding-left: 20vh;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 2rem;
+    width: 100%;
   }
-
-  main .main-quotes p {
-    border-left: 4px solid #c13584;
-    padding-left: 20px;
-    margin: 40px 0;
+  .container h2 {
+    font-size: 5rem;
+    color: #075985;
   }
-
-  main .main-quotes p:nth-child(2) {
-    margin-left: 100px;
+  .container p {
+    font-size: 1.5rem;
+    color: #0f172a;
   }
-
-  @media (min-width: 769px) {
-    main {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      background-image: url(/lumau-css-animations/images/woman_opt.png),
-        url(/lumau-css-animations/images/background.png);
-      background-size: 70vh, cover;
-      background-position:
-        85% bottom,
-        center;
-    }
-    .main-intro {
-      max-width: 50%;
-    }
+  .btn-cta {
+    padding: 8px 30px;
   }
 </style>
