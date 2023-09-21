@@ -1,0 +1,94 @@
+---
+import Layout from '../../layout/Layout.astro';
+
+const html = `
+    <div class="compare">
+      <two-up>
+        <div>
+          <img
+            src="/lumau-css-animations/images/imagen7_640_opt.jpg"
+            alt="LALA"
+          />
+        </div>
+        <div>
+          <img
+            class="img2"
+            src="/lumau-css-animations/images/imagen7_640_opt.jpg"
+            alt="LALA"
+          />
+        </div>
+      </two-up>
+    </div>
+
+    <script src="https://unpkg.com/two-up-element@1"></script>
+
+`;
+const styles = `
+ .compare {
+    /* height: 200px; */
+    height: auto;
+    width: 300px;
+    margin: 0 auto 50px;
+    display: flex;
+  }
+  two-up {
+    flex: 1;
+  }
+  .img2 {
+    filter: sepia(100%);
+  }
+`;
+---
+
+<Layout
+  pageTitle="Asesoría financiera"
+  description="Black Wing optimiza tus Finanzas con Profesionales. Nuestros asesores financieros están aquí para ayudarlo. Ingresa y comunícate con nuestro equipo"
+>
+  <main>
+    <h1 class="text-slate-200 text-center text-3xl p-8">
+      Comparación de imágenes
+    </h1>
+
+    <div class="compare">
+      <two-up>
+        <div>
+          <img
+            src="/lumau-css-animations/images/imagen7_640_opt.jpg"
+            alt="LALA"
+          />
+        </div>
+        <div>
+          <img
+            class="img2"
+            src="/lumau-css-animations/images/imagen7_640_opt.jpg"
+            alt="LALA"
+          />
+        </div>
+      </two-up>
+    </div>
+  </main>
+  <div class="w-2/3 mt-8 mx-auto">
+    <pre><code class="language-html">{html}</code> </pre>
+  </div>
+  <div class="w-2/3 mt-4 mb-8 mx-auto">
+    <pre><code class="language-css">{styles}</code></pre>
+  </div>
+</Layout>
+
+<style>
+  .compare {
+    /* height: 200px; */
+    height: auto;
+    width: 500px;
+    margin: 0 auto 50px;
+    display: flex;
+  }
+  two-up {
+    flex: 1;
+  }
+  .img2 {
+    filter: sepia(100%);
+  }
+</style>
+
+<script src="https://unpkg.com/two-up-element@1"></script>

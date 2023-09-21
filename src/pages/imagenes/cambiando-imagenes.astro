@@ -1,0 +1,140 @@
+---
+import Layout from '../../layout/Layout.astro';
+
+const html = `
+    <div class="background-container">
+      <div class="background-image"></div>
+    </div>
+`;
+const styles = `
+  .background-container {
+    position: relative;
+    width: 100%;
+    /* height: 100%; */
+    height: 400px;
+    overflow: hidden;
+  }
+
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: changeBackground 10s infinite;
+    opacity: 0; /* Inicialmente ocultar la imagen */
+  }
+
+  @keyframes changeBackground {
+    0% {
+      background-image: url('/lumau-css-animations/images/imagen1.jpg');
+      opacity: 1; /* Mostrar la imagen al principio */
+    }
+    20% {
+      opacity: 0; /* Ocultar la imagen actual */
+    }
+    25% {
+      background-image: url('/lumau-css-animations/images/imagen2.jpg');
+      opacity: 1; /* Mostrar la siguiente imagen */
+    }
+    45% {
+      opacity: 0; /* Ocultar la imagen actual */
+    }
+    50% {
+      background-image: url('/lumau-css-animations/images/imagen3.jpg');
+      opacity: 1; /* Mostrar la siguiente imagen */
+    }
+    70% {
+      opacity: 0; /* Ocultar la imagen actual */
+    }
+    75% {
+      background-image: url('/lumau-css-animations/images/imagen4.jpg');
+      opacity: 1; /* Mostrar la siguiente imagen */
+    }
+    95% {
+      opacity: 0; /* Ocultar la imagen actual */
+    }
+    100% {
+      background-image: url('/lumau-css-animations/images/imagen1.jpg');
+      opacity: 1; /* Mostrar la primera imagen de nuevo */
+    }
+  }
+`;
+---
+
+<Layout
+  pageTitle="Asesoría financiera"
+  description="Black Wing optimiza tus Finanzas con Profesionales. Nuestros asesores financieros están aquí para ayudarlo. Ingresa y comunícate con nuestro equipo"
+>
+  <main>
+    <h1 class="text-slate-200 text-center text-3xl pt-4">Cambiando imágenes</h1>
+    <div class="background-container">
+      <div class="background-image"></div>
+    </div>
+  </main>
+  <div class="w-2/3 mt-8 mx-auto">
+    <pre><code class="language-html">{html}</code> </pre>
+  </div>
+  <div class="w-2/3 mt-4 mb-8 mx-auto">
+    <pre><code class="language-css">{styles}</code></pre>
+  </div>
+</Layout>
+
+<style>
+  .background-container {
+    position: relative;
+    width: 100%;
+    /* height: 100%; */
+    height: 400px;
+    overflow: hidden;
+  }
+
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: changeBackground 10s infinite;
+    opacity: 0; /* Inicialmente ocultar la imagen */
+  }
+
+  @keyframes changeBackground {
+    0% {
+      background-image: url('/lumau-css-animations/images/imagen1.jpg');
+      opacity: 1; /* Mostrar la imagen al principio */
+    }
+    20% {
+      opacity: 0; /* Ocultar la imagen actual */
+    }
+    25% {
+      background-image: url('/lumau-css-animations/images/imagen2.jpg');
+      opacity: 1; /* Mostrar la siguiente imagen */
+    }
+    45% {
+      opacity: 0; /* Ocultar la imagen actual */
+    }
+    50% {
+      background-image: url('/lumau-css-animations/images/imagen3.jpg');
+      opacity: 1; /* Mostrar la siguiente imagen */
+    }
+    70% {
+      opacity: 0; /* Ocultar la imagen actual */
+    }
+    75% {
+      background-image: url('/lumau-css-animations/images/imagen4.jpg');
+      opacity: 1; /* Mostrar la siguiente imagen */
+    }
+    95% {
+      opacity: 0; /* Ocultar la imagen actual */
+    }
+    100% {
+      background-image: url('/lumau-css-animations/images/imagen1.jpg');
+      opacity: 1; /* Mostrar la primera imagen de nuevo */
+    }
+  }
+</style>
